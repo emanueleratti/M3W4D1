@@ -6,6 +6,7 @@
 .white {color: #ffffff!important;}
 .grey {color: #aaaaaa!important;}
 .black {color: #222222!important;}
+.green {color: rgb(16, 195, 0);}
 
 /* FONT */
 h2 {
@@ -22,6 +23,7 @@ p, a {
     font-size: 0.7rem;
     font-weight: 300;
     text-decoration: none;
+    margin-bottom: 0px;
 }
 
 a:hover {
@@ -33,6 +35,19 @@ a:hover {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.small {
+    font-size: 0.4em;
+}
+
+.bordered {
+    border: 1.6px solid;
+    padding: 1px 3px;
 }
 
 /* ANIMATION */
@@ -66,6 +81,8 @@ header {
 
 #burgher-menu {
     font-size: 1.5rem;
+    pointer-events: cursor;
+    cursor: pointer;
 }
 
 /* NAVBAR MOBILE */
@@ -85,6 +102,7 @@ header {
     font-weight: 500;
 }
 
+/* MAIN */
 main {
     overflow: hidden;
     box-shadow: 10px 0 10px rgba(0, 0, 0, 0.1);
@@ -120,23 +138,50 @@ main {
     color: #222222;
 }
 
+.swiper {
+    overflow: visible;
+}
+
+.film-card {
+    position: relative;
+    z-index: 5;
+}
+
+.film-card-details {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    /* box-shadow: 0px 0px 25px 15px #000000;*/
+    z-index: 10;
+}
+
+.film-card-details .bottom {
+    margin-top: -15px;
+    background: #000000;
+}
+
+.controls a ion-icon {
+    font-size: 2rem;
+}
+
+
 .card-container::after {
     content: "";
     position: absolute;
-    top: 0;
+    bottom: 0;
     right: 0;
-    height: 100%;
-    width: 30%;
-    background: linear-gradient(to right, #00000000, #000000  90%);
+    height: 80%;
+    width: 70%;
+    background: linear-gradient(to right, #03030300, #030303  90%);
     z-index: 1;
 }
 
-.swiper-button-next, .swiper-button-prev {
-    position: static;
-    height: max-content;
-    align-items: first baseline;
-    top: inherit;
-    margin-top: inherit;
+.controls {
+    position: absolute;
+    top: -40px;
+    right: 0;
 }
 
 .swiper-button-next::after, .swiper-button-prev::after {
@@ -152,6 +197,7 @@ main {
     font-size: 1.2rem;
 }
 
+/* FOOTER */
 footer {
     background: #000000;
 }

@@ -1,11 +1,25 @@
 const navbarBurgherMenu = document.getElementById("burgher-menu")
+const main = document.querySelector("main");
 
-navbarBurgherMenu.addEventListener("click", () => {
-    const main = document.querySelector("main");
+const sidebarAnimation = () => {
     if (!main.classList.contains("slide-left")) {
         main.classList.add("slide-left");
         main.classList.remove("slide-right")
     } else if (main.classList.contains("slide-left")) {
+        main.classList.remove("slide-left");
+        main.classList.add("slide-right")
+    }
+}
+
+navbarBurgherMenu.addEventListener("click", sidebarAnimation)
+
+document.addEventListener("click", (e) => {
+    const sidebar = document.getElementById("slide-menu");
+    const isClickedInsideSidebar = sidebar.contains(e.target);
+    const isClickedButton = navbarBurgherMenu.contains(e.target);
+
+    console.log(e.target)
+    if(!isClickedInsideSidebar && !isClickedButton){
         main.classList.remove("slide-left");
         main.classList.add("slide-right")
     }

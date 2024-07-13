@@ -14,7 +14,7 @@
     <header class="container-fluid bg-black">
         <!-- NAVBAR -->
         <nav class="navbar d-flex gap-4 gap-md-3">
-            <a id="burgher-menu" href="#" class="d-flex d-md-none"><ion-icon class="white"
+            <a id="burgher-menu" class="d-flex d-md-none"><ion-icon class="white"
                     name="menu-outline"></ion-icon></a>
 
             <a class="flex-grow-1 flex-md-grow-0" href="#"><img src="./assets/Netflix_Logo_RGB.png" width="80"
@@ -86,24 +86,48 @@
         </section>
 
         <!-- TRENDING NOW -->
-        <section id="trending-now" class="container-fluid">
+        <section id="trending-now" class="container-fluid position-relative">
             <div class="row d-flex justify-content-center">
                 <div class="col-11 col-xxl-9">
-                    <div class="d-flex flex-column gap-3 position-relative">
-                        <div class="d-flex justify-content-between">
-                            <h3 class="white">Trending Now</h3>
-                            <div class="d-flex gap-4 ">
+                    <div class="d-flex flex-column gap-3 card-container">
+                        <h3 class="white">Trending Now</h3>
+                        <div class="col-12 swiper">
+                            <div class="controls">
                                 <span class="white swiper-button-prev"></span>
-                                <div class="white swiper-button-next"></div>
+                                <span class="white swiper-button-next"></span>
                             </div>
-                        </div>
-                        <div class="col-12 card-container swiper">
                             <!-- Additional required wrapper -->
                             <div class="swiper-wrapper">
                                 <!-- Slides -->
                                 <div class="swiper-slide">
                                     <div class="film-card">
                                         <img src="./assets/1.png" alt="" class="w-100">
+                                        <div class="film-card-details d-flex flex-column">
+                                            <div class="top">
+                                                <iframe width="100%" height="100%" src="http://www.youtube.com/embed/SaqWJ-lQDtE?autoplay=1&mute=1&loop=1" title="Unorthodox - Trailer Ufficiale" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"  referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                                            </div>
+                                            <div class="bottom d-flex flex-column gap-2 p-3">
+                                                <div class="controls d-flex ">
+                                                    <a class="white" href=""><ion-icon name="play-circle-outline"></ion-icon></a>
+                                                    <a class="white" href=""><ion-icon name="add-circle-outline"></ion-icon></a>
+                                                    <a class="white" href=""><ion-icon name="heart-circle-outline"></ion-icon></a>
+                                                    <a class="white flex-grow-1 d-flex justify-content-end" href=""><ion-icon name="chevron-down-circle-outline"></ion-icon></a>
+                                                </div>
+                                                <div class="valutation d-flex align-items-center gap-2">
+                                                    <p class="green bold">71% compatibile</p>
+                                                    <p class="grey bordered">13+</p>
+                                                    <p class="grey">Miniserie</p>
+                                                    <p class="bold grey bordered">HD</p>
+                                                </div>
+                                                <div class="tags d-flex align-items-center gap-2">
+                                                    <p class="white">Profondo</p>
+                                                    <p class="white small">●</p>
+                                                    <p class="white">Emozionante</p>
+                                                    <p class="white small">●</p>
+                                                    <p class="white">Drama</p>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="swiper-slide">
@@ -139,18 +163,20 @@
         </section>
 
         <!-- WATCH IT AGAIN -->
-        <section id="watch-again" class="container-fluid">
+        <section id="watch-again" class="container-fluid position-relative">
             <div class="row d-flex justify-content-center">
                 <div class="col-11 col-xxl-9">
-                    <div class="d-flex flex-column gap-3 position-relative">
+                    <div class="d-flex flex-column gap-3 card-container">
                         <div class="d-flex justify-content-between">
                             <h3 class="white">Watch It Again</h3>
                             <div class="d-flex gap-4 ">
-                                <span class="white swiper-button-prev"></span>
-                                <div class="white swiper-button-next"></div>
+
                             </div>
                         </div>
-                        <div class="col-12 card-container swiper">
+                        <div class="col-12 ">
+                            <div class="swiper">
+                                <span class="white swiper-button-prev"></span>
+                                <span class="white swiper-button-next"></span>
                             <!-- Additional required wrapper -->
                             <div class="swiper-wrapper">
                                 <!-- Slides -->
@@ -187,6 +213,7 @@
                             </div>
                         </div>
                     </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -199,13 +226,14 @@
                         <div class="d-flex justify-content-between">
                             <h3 class="white">New Releases</h3>
                             <div class="d-flex gap-4">
-                                <span class="white swiper-button-prev"></span>
-                                <div class="white swiper-button-next"></div>
+
                             </div>
                         </div>
-                        <div class="col-12 card-container swiper">
+                        <div class="col-12 swiper">
+                            <span class="white swiper-button-prev"></span>
+                            <div class="white swiper-button-next"></div>
                             <!-- Additional required wrapper -->
-                            <div class="swiper-wrapper">
+                            <div class="swiper-wrapper card-container">
                                 <!-- Slides -->
                                 <div class="swiper-slide">
                                     <div class="film-card">
