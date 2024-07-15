@@ -11,6 +11,7 @@
 </head>
 
 <body>
+    <!-- HEADER -->
     <header class="container-fluid bg-black">
         <!-- NAVBAR -->
         <nav class="navbar d-flex gap-4 gap-md-3">
@@ -49,6 +50,7 @@
         <a class="white" href="#">My List</a>
     </div>
 
+    <!-- MAIN -->
     <main class="bg-black d-flex flex-column gap-5 pb-5">
 
         <!-- HERO SECTION -->
@@ -57,8 +59,8 @@
                 <div class="col-11 col-xxl-9">
                     <div class="row">
                         <div class="col-12 col-md-6 d-flex flex-column gap-3">
-                            <img src="./assets/hero-logo.png" alt="logo hero section" width="300">
-                            <h3 class="white">Questa serie dello studio di animazione MAPPA, incentrata su un liceale che tenta di uccidere la maledizione che vive in lui, ha vinto tre Crunchyroll Anim e Awards.</h3>
+                            <img src="./assets/hero-logo2.webp" alt="logo hero section" width="300">
+                            <h3 class="white">Il giovane Eren Yeager è deciso a lottare contro i Giganti che hanno distrutto la sua città e minacciano di fare lo stesso con l'intera razza umana.</h3>
                             <div class="d-flex gap-4">
                                 <button class="black bg-white d-flex gap-2"><ion-icon class="black" name="play"></ion-icon> Riproduci</button>
                                 <button class="black bg-white d-flex gap-2"><ion-icon class="black" name="information-circle-outline"></ion-icon> Altre info</button>
@@ -86,7 +88,7 @@
         </section>
 
         <!-- TRENDING NOW -->
-        <section id="trending-now" class="container-fluid ">
+        <section class="container-fluid animation-scroll">
             <div class="row d-flex justify-content-center">
                 <div class="col-11 col-xxl-9 position-relative">
                     <div class="d-flex flex-column gap-3 card-container">
@@ -96,70 +98,42 @@
                                 <span class="white swiper-button-next"></span>
                                 <span class="white swiper-button-prev"></span>
                             </div>
-                            <!-- Additional required wrapper -->
-                            <div class="swiper-wrapper">
-                                <!-- Slides -->
-                                <div class="swiper-slide position-relative">
-                                    <div class="film-card">
-                                        <img src="./assets/1.png" alt="" class="w-100">
-                                        <div class="film-card-details d-flex flex-column">
-                                            <div class="top">
-                                                <iframe width="100%" height="100%" src="http://www.youtube.com/embed/SaqWJ-lQDtE?autoplay=1&mute=1&loop=1&showinfo=0&controls=0&loop=1" frameborder="0" allow="autoplay;"  referrerpolicy="strict-origin-when-cross-origin"></iframe>
-                                            </div>
-                                            <div class="bottom d-flex flex-column gap-2 px-2 py-3">
-                                                <div class="icons d-flex">
-                                                    <a class="white" href=""><ion-icon name="play-circle-outline"></ion-icon></a>
-                                                    <a class="white" href=""><ion-icon name="add-circle-outline"></ion-icon></a>
-                                                    <a class="white" href=""><ion-icon name="heart-circle-outline"></ion-icon></a>
-                                                    <a class="white flex-grow-1 d-flex justify-content-end" href=""><ion-icon name="chevron-down-circle-outline"></ion-icon></a>
+                            <div id="trending-now" class="swiper-wrapper">
+                                <!-- CARD TEMPLATE -->
+                                <template id="film-card-template">
+                                    <div class="swiper-slide position-relative">
+                                        <div class="film-card">
+                                            <img src="" alt="" class="card-img w-100">
+                                            <div class="film-card-details d-flex flex-column">
+                                                <div class="top">
+                                                    <iframe width="100%" height="100%" src="" frameborder="0" allow="autoplay; fullscreen;"  referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                                                 </div>
-                                                <div class="valutation d-flex align-items-center gap-2">
-                                                    <p class="green bold">71% compatibile</p>
-                                                    <p class="grey bordered">13+</p>
-                                                    <p class="grey">Miniserie</p>
-                                                    <p class="bold grey bordered">HD</p>
-                                                </div>
-                                                <div class="tags d-flex align-items-center gap-2">
-                                                    <p class="white">Profondo</p>
-                                                    <p class="white small">●</p>
-                                                    <p class="white">Emozionante</p>
-                                                    <p class="white small">●</p>
-                                                    <p class="white">Drama</p>
+                                                <div class="bottom d-flex flex-column gap-2 px-2 py-3">
+                                                    <div class="icons d-flex">
+                                                        <a class="white" href=""><ion-icon name="play-circle-outline"></ion-icon></a>
+                                                        <a class="white" href=""><ion-icon name="add-circle-outline"></ion-icon></a>
+                                                        <a class="white" href=""><ion-icon name="heart-circle-outline"></ion-icon></a>
+                                                        <a class="white flex-grow-1 d-flex justify-content-end" href=""><ion-icon name="chevron-down-circle-outline"></ion-icon></a>
+                                                    </div>
+                                                    <div class="valutation d-flex align-items-center gap-2">
+                                                        <p class="compatibility green bold"></p>
+                                                        <p class="age grey bordered"></p>
+                                                        <p class="type grey"></p>
+                                                        <p class="quality bold grey bordered"></p>
+                                                    </div>
+                                                    <div class="categories d-flex align-items-center gap-2">
+                                                        <p class="white"></p>
+                                                        <p class="white small">●</p>
+                                                        <p class="white"></p>
+                                                        <p class="white small">●</p>
+                                                        <p class="white"></p>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="film-card">
-                                        <img src="./assets/2.png" alt="" class="w-100">
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="film-card">
-                                        <img src="./assets/3.png" alt="" class="w-100">
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="film-card">
-                                        <img src="./assets/4.png" alt="" class="w-100">
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="film-card">
-                                        <img src="./assets/5.png" alt="" class="w-100">
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="film-card">
-                                        <img src="./assets/6.png" alt="" class="w-100">
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="film-card">
-                                        <img src="./assets/7.png" alt="" class="w-100">
-                                    </div>
-                                </div>
+                                </template>
+                                <!--  -->
                             </div>
                         </div>
                     </div>
@@ -168,108 +142,55 @@
         </section>
 
         <!-- WATCH IT AGAIN -->
-        <section id="watch-again" class="container-fluid position-relative">
+        <section class="container-fluid position-relative animation-scroll">
             <div class="row d-flex justify-content-center">
-                <div class="col-11 col-xxl-9">
+                <div class="col-11 col-xxl-9 position-relative">
                     <div class="d-flex flex-column gap-3 card-container">
-                        <div class="d-flex justify-content-between">
-                            <h3 class="white">Watch It Again</h3>
-                            <div class="d-flex gap-4 ">
-
-                            </div>
-                        </div>
-                        <div class="col-12 ">
-                            <div class="swiper">
-                                <span class="white swiper-button-prev"></span>
+                        <h3 class="white">Watch It Again</h3>
+                        <div class="col-12 swiper">
+                            <div class="slide-controls">
                                 <span class="white swiper-button-next"></span>
-                            <!-- Additional required wrapper -->
-                            <div class="swiper-wrapper">
-                                <!-- Slides -->
-                                <div class="swiper-slide">
-                                    <div class="film-card">
-                                        <img src="./assets/7.png" alt="" class="w-100">
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="film-card">
-                                        <img src="./assets/8.png" alt="" class="w-100">
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="film-card">
-                                        <img src="./assets/9.png" alt="" class="w-100">
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="film-card">
-                                        <img src="./assets/10.png" alt="" class="w-100">
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="film-card">
-                                        <img src="./assets/11.png" alt="" class="w-100">
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="film-card">
-                                        <img src="./assets/12.png" alt="" class="w-100">
-                                    </div>
-                                </div>
+                                <span class="white swiper-button-prev"></span>
+                            </div>
+                            <div id="watch-again" class="swiper-wrapper">
                             </div>
                         </div>
-                    </div>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- NEW RELEASES -->
-        <section id="new-release" class="container-fluid">
+        <section class="container-fluid animation-scroll">
             <div class="row d-flex justify-content-center">
-                <div class="col-11 col-xxl-9">
-                    <div class="d-flex flex-column gap-3 position-relative">
-                        <div class="d-flex justify-content-between">
-                            <h3 class="white">New Releases</h3>
-                            <div class="d-flex gap-4">
-
+                <div class="col-11 col-xxl-9 position-relative">
+                    <div class="d-flex flex-column gap-3 card-container">
+                        <h3 class="white">New Releases</h3>
+                        <div class="col-12 swiper">
+                            <div class="slide-controls">
+                                <span class="white swiper-button-next"></span>
+                                <span class="white swiper-button-prev"></span>
+                            </div>
+                            <div id="new-releases" class="swiper-wrapper">
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SELECTED FOR YOU -->
+        <section class="container-fluid animation-scroll">
+            <div class="row d-flex justify-content-center">
+                <div class="col-11 col-xxl-9 position-relative">
+                    <div class="d-flex flex-column gap-3 card-container">
+                        <h3 class="white">Selected For You</h3>
                         <div class="col-12 swiper">
-                            <span class="white swiper-button-prev"></span>
-                            <div class="white swiper-button-next"></div>
-                            <!-- Additional required wrapper -->
-                            <div class="swiper-wrapper card-container">
-                                <!-- Slides -->
-                                <div class="swiper-slide">
-                                    <div class="film-card">
-                                        <img src="./assets/13.png" alt="" class="w-100">
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="film-card">
-                                        <img src="./assets/14.png" alt="" class="w-100">
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="film-card">
-                                        <img src="./assets/15.png" alt="" class="w-100">
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="film-card">
-                                        <img src="./assets/16.png" alt="" class="w-100">
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="film-card">
-                                        <img src="./assets/17.png" alt="" class="w-100">
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="film-card">
-                                        <img src="./assets/18.png" alt="" class="w-100">
-                                    </div>
-                                </div>
+                            <div class="slide-controls">
+                                <span class="white swiper-button-next"></span>
+                                <span class="white swiper-button-prev"></span>
+                            </div>
+                            <div id="selected-for-you" class="swiper-wrapper">
                             </div>
                         </div>
                     </div>
@@ -278,8 +199,9 @@
         </section>
     </main>
 
+    <!-- FOOTER -->
     <footer class="d-flex flex-column gap-5 py-5">
-        <section class="container-fluid">
+        <section class="container-fluid  animation-scroll">
             <div class="row d-flex justify-content-center">
                 <div class="col-11 col-sm-10 col-lg-8 col-xxl-7">
                     <div class="d-flex flex-column gap-4">
@@ -313,8 +235,8 @@
                             </div>
                         </div>
                         <button class="white">Service Code</button>
-                        <p class="grey">© 1997-2019 Netflix, Inc. (i-0d00fcda2tdf9c0de}</p>
-
+                        <p class="grey">© 1997-2024 Netflix, Inc. (i-0d00fcda2tdf9c0de}</p>
+                    </div>
                 </div>
             </div>
         </section>
