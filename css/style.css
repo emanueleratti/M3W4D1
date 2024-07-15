@@ -199,9 +199,9 @@ iframe {
 .card-container::after {
     content: "";
     position: absolute;
-    bottom: 0;
+    bottom: -5px;
     right: 0;
-    height: 75%;
+    height: 80%;
     width: 20%;
     background: linear-gradient(to right, #16161600, #161616  90%);
     z-index: 1;
@@ -256,7 +256,7 @@ footer button:hover {
         width: 40%;
     }
     .film-card:hover .film-card-details {
-        transform: scale(1);
+        transform: scale(1.05);
     }
 }
 
